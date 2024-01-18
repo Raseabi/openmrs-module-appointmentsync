@@ -30,3 +30,19 @@ If uploads are not allowed from the web (changable via a runtime property), you 
 into the ~/.OpenMRS/modules folder.  (Where ~/.OpenMRS is assumed to be the Application 
 Data Directory that the running openmrs is currently using.)  After putting the file in there 
 simply restart OpenMRS/tomcat and the module will be loaded and started.
+
+SQL Query
+------------
+
+`
+SELECT
+e.identifier, b.given_name,
+b.family_name, a.start_date_time, a.end_date_time, c.gender, a.patient_id, address2, birthdate, status, comments
+FROM patient_appointment a
+LEFT JOIN person_name b on a.patient_id = b.person_id
+LEFT JOIN person c on a.patient_id = c.person_id
+LEFT JOIN person_address d on a.patient_id = d.person_id
+LEFT JOIN patient_identifier e on a.patient_id = e.patient_id  
+WHERE b.person_id IS NOT NULL
+AND e.identifier_type = 3
+limit 3;`
