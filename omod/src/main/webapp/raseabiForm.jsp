@@ -2,7 +2,7 @@
 
 <%@ include file="/WEB-INF/template/header.jsp"%>
 
-<h2><spring:message code="basicmodule.replace.this.link.name" /></h2>
+<h2><spring:message code="raseabi.replace.this.link.name" /></h2>
 
 <br/>
 <table>

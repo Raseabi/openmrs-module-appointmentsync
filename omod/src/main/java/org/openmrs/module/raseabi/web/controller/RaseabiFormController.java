@@ -33,14 +33,14 @@ import org.springframework.web.bind.annotation.RequestMethod;
  * 'module/basicmodule/basicmoduleLink.form'.
  */
 @Controller
-@RequestMapping(value = "module/basicmodule/basicmoduleLink.form")
-public class BasicModuleFormController {
+@RequestMapping(value = "module/raseabi/raseabiLink.form")
+public class RaseabiFormController {
 	
 	/** Logger for this class and subclasses */
 	protected final Log log = LogFactory.getLog(getClass());
 	
 	/** Success form view name */
-	private final String SUCCESS_FORM_VIEW = "/module/basicmodule/basicmoduleForm";
+	private final String SUCCESS_FORM_VIEW = "/module/raseabi/raseabiForm";
 	
 	/**
 	 * Initially called after the formBackingObject method to get the landing form name
