@@ -26,7 +26,10 @@
 	<!-- Annotation based controllers -->
 	<bean class="org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping"/>
 	
-	<context:component-scan base-package="org.openmrs.module.raseabi.web.controller" />
+<!--	<context:component-scan base-package="org.openmrs.module.raseabi.web.controller" />-->
+<!--	<context:component-scan base-package="org.openmrs.module.raseabi.web.controller" />-->
+	<context:component-scan base-package="org.openmrs.module.raseabi" />
+	<context:component-scan base-package="org.openmrs.module.raseabi.web" />
  
 		
 </beans>

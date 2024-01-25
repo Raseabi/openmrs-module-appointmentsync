@@ -28,14 +28,14 @@ public class RaseabiModuleActivator extends BaseModuleActivator {
 	 * @see org.openmrs.module.Activator#startup()
 	 */
 	public void startup() {
-		log.info("Starting Basic Module");
+		log.info("Starting Raseabi Appointment Sync Module");
 	}
 	
 	/**
 	 * @see org.openmrs.module.Activator#shutdown()
 	 */
 	public void shutdown() {
-		log.info("Shutting down Basic Module");
+		log.info("Shutting down Raseabi Appointment Sync Module");
 	}
 	
 }

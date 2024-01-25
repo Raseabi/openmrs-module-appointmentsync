@@ -62,9 +62,9 @@ public class HibernateRaseabiDao implements RaseabiDao {
 		return appointments;
 	}
 	
-	@Override
-	public Appointment getAppointment(Integer appointmentId) {
-		return null;
-	}
+//	@Override
+//	public Appointment getAppointment(Integer appointmentId) {
+//		return null;
+//	}
 	
 }

@@ -10,7 +10,7 @@
 	<artifactId>raseabi-omod</artifactId>
 	<packaging>jar</packaging>
 	<name>Raseabi Module OMOD</name>
-	<description>OpenMRS module project for Basic Module</description>
+	<description>Raseabi Module for patient appointment reminder: send message to patients as a reminder</description>
 
 	<dependencies>
         <dependency>

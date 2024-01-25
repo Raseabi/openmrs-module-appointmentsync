@@ -8,14 +8,18 @@
 <table>
   <tr>
    <th>Patient Id</th>
-   <th>Name</th>
-   <th>Identifier</th>
+   <th>Names</th>
+   <th>Gender</th>
+   <th>Mobile Number</th>
+   <th>Appointment Date</th>
   </tr>
-  <c:forEach var="patient" items="${thePatientList}">
+  <c:forEach items="${appointments}" var="appointment">
       <tr>
-        <td>${patient.patientId}</td>
-        <td>${patient.personName}</td>
-        <td>${patient.patientIdentifier}</td>
+        <td>${appointment.patientIdentifier}</td>
+        <td>${appointment.personName}</td>
+        <td>${appointment.gender}</td>
+        <td>${appointment.mobileNumber}</td>
+        <td>${appointment.startDate}</td>
       </tr>		
   </c:forEach>
 </table>

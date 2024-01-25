@@ -8,6 +8,6 @@ public interface RaseabiDao {
 	
 	List<Appointment> getAllAppointments();
 	
-	Appointment getAppointment(Integer appointmentId);
+//	Appointment getAppointment(Integer appointmentId);
 	
 }

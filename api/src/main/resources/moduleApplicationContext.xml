@@ -21,6 +21,42 @@
   		    http://www.springframework.org/schema/aop
   		    http://www.springframework.org/schema/aop/spring-aop-3.0.xsd
   		    http://www.springframework.org/schema/util
-  		    http://www.springframework.org/schema/util/spring-util-3.0.xsd">
+  		    http://www.springframework.org/schema/util/spring-util-3.0.xsd
+http://www.springframework.org/schema/p ">
+
+
+    <context:component-scan base-package="org.openmrs.module.raseabi"/>
+    <!-- Services accessible via Context.getService() -->
+    <bean parent="serviceContext">
+        <property name="moduleService">
+            <list>
+                <value>org.openmrs.module.raseabi.api.RaseabiService</value>
+                <bean
+                        class="org.springframework.transaction.interceptor.TransactionProxyFactoryBean">
+                    <property name="transactionManager">
+                        <ref bean="transactionManager"/>
+                    </property>
+                    <property name="target">
+                        <bean name="raseabi"
+                              class="org.openmrs.module.raseabi.api.impl.RaseabiServiceImpl">
+                            <property name="dao">
+                                <bean class="org.openmrs.module.raseabi.api.db.hibernate.HibernateRaseabiDao">
+                                    <property name="sessionFactory">
+                                        <ref bean="sessionFactory"/>
+                                    </property>
+                                </bean>
+                            </property>
+                        </bean>
+                    </property>
+                    <property name="preInterceptors">
+                        <ref bean="serviceInterceptors"/>
+                    </property>
+                    <property name="transactionAttributeSource">
+                        <ref bean="transactionAttributeSource"/>
+                    </property>
+                </bean>
+            </list>
+        </property>
+    </bean>
 
 </beans>

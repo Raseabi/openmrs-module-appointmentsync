@@ -13,7 +13,7 @@
 	<version>0.1-SNAPSHOT</version>
 	<packaging>pom</packaging>
 	<name>Raseabi Module</name>
-	<description>Example OpenMRS Module that may be used as a basis for creating a new module.</description>
+	<description>Raseabi Module for Patient Appointment Reminder.</description>
 
 	<url>https://wiki.openmrs.org/x/FQ4z</url>
 
@@ -29,6 +29,16 @@
 	</modules>
 
     <properties>
-        <openmrs.platform.version>1.11.2</openmrs.platform.version>
+     	<openmrs.platform.version>1.11.2</openmrs.platform.version>
+<!--		<openmrsPlatformVersion>1.11.6</openmrsPlatformVersion>-->
     </properties>
+
+<!--	<dependencies>-->
+<!--		<dependency>-->
+<!--			<groupId>org.openmrs.module</groupId>-->
+<!--			<artifactId>emrapi-api-1.12</artifactId>-->
+<!--			<version>1.24.5</version>-->
+<!--			<scope>provided</scope>-->
+<!--		</dependency>-->
+<!--	</dependencies>-->
 </project>
